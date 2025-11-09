@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa';
 import { IoIosCall, IoIosCamera } from 'react-icons/io';
 import { FaBars } from 'react-icons/fa6';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,8 +46,6 @@ const Navbar = () => {
             </Link>
           ))}
 
-
-
         </div>
         <div className='md:hidden'>
           {isOpen ? (
@@ -65,7 +63,6 @@ const Navbar = () => {
               />
             </div>
           )}
-
         </div>
       </div>
 
@@ -80,46 +77,15 @@ const Navbar = () => {
             { path: "/services", label: "Services" },
             { path: "/chancekart", label: "ChanceKart" },
             { path: "/contact", label: "Contact Us" }
-          ].map((item,index) => (
+          ].map((item, index) => (
             <Link
-            to={item.path}
-            className="block px-4 py-2 text-sm hover:text-orange-600 hover:scale-120"
-            onClick={toggleMenu} // Close menu on click
-          >
-            {item.label}
-          </Link>
-
+              to={item.path}
+              className="block px-4 py-2 text-sm hover:text-orange-600 hover:scale-120"
+              onClick={toggleMenu} // Close menu on click
+            >
+              {item.label}
+            </Link>
           ))}
-          
-          {/* <Link
-            to="/about"
-            className="block px-4 py-2 text-sm hover:text-orange-600 hover:scale-120"
-            onClick={toggleMenu} // Close menu on click
-          >
-            About Us
-          </Link>
-          <Link
-            // to="/pricingsection"
-            to="/study-germany"
-            className="block px-4 py-2 text-sm hover:text-orange-600 hover:scale-120"
-            onClick={toggleMenu} // Close menu on click
-          >
-            Services
-          </Link>
-          <Link
-            to="/chancekart"
-            className="block px-4 py-2 text-sm hover:text-orange-600 hover:scale-120"
-            onClick={toggleMenu} // Close menu on click
-          >
-            ChanceKart
-          </Link>
-          <Link
-            to="/contact"
-            className="block px-4 py-2 text-sm hover:text-orange-600 hover:scale-120"
-            onClick={toggleMenu} // Close menu on click
-          >
-            Contact Us
-          </Link> */}
         </div>
       )}
     </nav>
