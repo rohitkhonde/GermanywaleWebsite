@@ -9,14 +9,14 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Header = () => {
   return (
-    <div className='hidden sm:flex items-center justify-between py-6 px-8'
+    <div className='container hidden sm:flex items-center justify-between py-6 px-8'
     style={{fontFamily:"Gilroy"}}
     >
       <div className='sm:flex items-center justify-center gap-4'>
-        <p className='flex items-center space-x-1 text-xs'>
+        <p className='flex items-center space-x-1 text-xs justify-center truncate'>
          
           <Link
-          to="https://wa.me/8484977234"
+             to="https://wa.me/8484977234"
               className="whatsapp_float"
               target="_blank"
               rel="noopener noreferrer">
@@ -29,7 +29,7 @@ const Header = () => {
      
         <span>+91-8484977234</span>
         </p>
-       <p className='flex items-center space-x-1 text-xs'>
+       <p className='flex items-center space-x-1 text-xs truncate'>
           <Link to="tel:+4917655471593">
           <IoIosCall fontSize="1rem"/>
           </Link>
@@ -41,7 +41,7 @@ const Header = () => {
         </span>
         <span> +49-17655471593 </span>
         </p>
-      <p className='flex items-center space-x-1 text-xs'>
+      <p className='flex items-center space-x-1 text-xs truncate'>
         <Link to="mailto:saurabh@germanywale.com">
         <img src={gmail} 
         alt="gmail"

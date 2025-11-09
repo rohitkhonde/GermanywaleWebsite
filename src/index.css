@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.container{
+  margin: 0 auto;
+}
+
 @font-face {
     font-family: "Gilroy";
     src: url("styles/fonts/gilroy/Gilroy-ExtraBold.ttf");
@@ -13,10 +17,7 @@
   src: url("styles/fonts/gilroy/Gilroy-Medium.ttf");
 }
 
-@font-face {
-  font-family: "ZonaPro";
-  src: url("styles/fonts/ZonaPro.otf");
-}
+
 
 
 @font-face {
@@ -28,7 +29,7 @@
 }
 
 @font-face {
-  font-family: "Gilroy";
+  font-family: "Gilroy-Bold";
   src: url("styles/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
   font-weight: 700;
   /* Bold */
@@ -44,7 +45,7 @@
 }
 
 @font-face {
-  font-family: "Gilroy";
+  font-family: "Gilroy-extrabold";
   src: url("styles/fonts/gilroy/Gilroy-Black.ttf") format("truetype");
   font-weight: 900;
   /* Black */
