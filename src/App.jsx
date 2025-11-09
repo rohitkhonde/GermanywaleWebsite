@@ -2,10 +2,12 @@ import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
+
 // ✅ Lazy load components
 const Header = lazy(() => import('./components/Header/Header'))
 const Navbar = lazy(() => import('./components/Navbar/Navbar'))
 const Hero = lazy(() => import('./components/Hero/Hero'))
+const TopUniversities = lazy(() => import('./components/TopUniversities/TopUniversities'))
 
 
 // ✅ Create a proper loading component
@@ -29,6 +31,7 @@ function App() {
               <>
                 <Navbar />
                 <Hero />
+                <TopUniversities/>
               </>
             } />
             
