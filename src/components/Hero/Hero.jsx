@@ -42,12 +42,12 @@ const Hero = () => {
                 <img
                 src={t}
                 alt="tesla"
-                className="h-8 sm:h-10 w-7 md:h-12 object-contain"
+                className="h-8 sm:h-10 w-7 md:w-7 object-contain"
               />
               <img
                 src={b}
                 alt="bmw"
-                className=" h-9 sm:h-10 w-10 sm:w-10 md:w-14 object-contain"
+                className=" h-9 sm:h-10 w-10 sm:w-10  object-contain"
               />
               <img
                 src={a}
@@ -58,7 +58,7 @@ const Hero = () => {
               <img
                 src={l}
                 alt="lufthansa"
-                className="h-18 sm:h-24 w-24 sm:w-32 md:w-40 object-contain"
+                className="h-18 sm:h-24 w-24 sm:w-32 md:w-36 object-contain"
               />
                </div>
                
