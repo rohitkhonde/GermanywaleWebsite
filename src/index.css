@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("styles/fonts/gilroy/Gilroy-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: url("styles/fonts/gilroy/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("styles/fonts/gilroy/Gilroy-Medium.ttf");
+}
+
+@font-face {
+  font-family: "ZonaPro";
+  src: url("styles/fonts/ZonaPro.otf");
+}
+
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("styles/fonts/gilroy/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  /* Black */
+  font-style: bold;
+}
