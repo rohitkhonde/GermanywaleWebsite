@@ -59,38 +59,20 @@ const Testimonial = () => {
     cssEase: "ease",
     pauseOnHover: true, // ✅ Optional: pause on hover
     pauseOnFocus: true, // ✅ Optional: pause on focus
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-                autoplay: true, // ✅ Ensure autoplay works in responsive
-                autoplaySpeed: 3000,
-            }
+   responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
         },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1,
-                autoplay: true, // ✅ Ensure autoplay works in responsive
-                autoplaySpeed: 3000,
-            }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
         },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true, // ✅ Ensure autoplay works in responsive
-                autoplaySpeed: 3000,
-            }
-        }
-    ]
+      },
+    ],
 };
  const hotelCards = [
     {

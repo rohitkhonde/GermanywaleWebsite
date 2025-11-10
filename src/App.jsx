@@ -1,8 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-
-
+import Transparency from './components/Transparency/Transparency'
 
 // ✅ Lazy load components
 const Header = lazy(() => import('./components/Header/Header'))
@@ -11,6 +10,8 @@ const Hero = lazy(() => import('./components/Hero/Hero'))
 const TopUniversities = lazy(() => import('./components/TopUniversities/TopUniversities'))
 const Testimonial = lazy(()=> import("./components/Testimonial/Testimonial"))
 const Usp = lazy(()=> import('./components/Usp/Usp'))
+const StudyInGermany = lazy(()=>import('./components/StudyInGermany/StudyInGermany'))
+const SyncDocument = lazy(()=> import("./components/SyncDocument/SyncDocument"))
 // ✅ Create a proper loading component
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center min-h-screen">
@@ -35,6 +36,10 @@ function App() {
                 <TopUniversities/>
                 <Testimonial/>
                 <Usp/>
+                <StudyInGermany/>
+                <Transparency/>
+                <SyncDocument/>
+                
               </>
             } />
             
