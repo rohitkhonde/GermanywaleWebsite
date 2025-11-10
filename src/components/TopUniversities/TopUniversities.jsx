@@ -24,7 +24,7 @@ const universities = [
      { name: "hochschule", logo: hochschule, className:"w-64 h-auto"},
   { name: "universitat", logo: universitat, className:"w-64 h-auto" },
   { name: "universityofeurope", logo: universityofeurope,className:"w-32 h-auto" },
-  { name: "technische", logo: technische ,className:"w-20 h-auto"},
+  { name: "technische", logo: technische ,className:"w-32 h-auto"},
   { name: "tuhh", logo: tuhh },
   { name: "schmalkalden", logo: schmalkalden,className:"w-64 h-auto" },
   { name: "worms", logo: worms,className:"w-48 h-auto" },
@@ -47,7 +47,7 @@ const TopUniversities = () => {
         }}>
             <section className='container px-8'>
                 <div style={{fontFamily:"Gilroy-Bold"}}>
-                    <h3 className="text-2xl sm:text-4xl bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent">
+                    <h3 className="text-2xl sm:text-2xl md:text-4xl bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent">
                         Top Universities
                     </h3>
                 </div>

@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 
+
 // ✅ Lazy load components
 const Header = lazy(() => import('./components/Header/Header'))
 const Navbar = lazy(() => import('./components/Navbar/Navbar'))
 const Hero = lazy(() => import('./components/Hero/Hero'))
 const TopUniversities = lazy(() => import('./components/TopUniversities/TopUniversities'))
-
-
+const Testimonial = lazy(()=> import("./components/Testimonial/Testimonial"))
+const Usp = lazy(()=> import('./components/Usp/Usp'))
 // ✅ Create a proper loading component
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center min-h-screen">
@@ -32,6 +33,8 @@ function App() {
                 <Navbar />
                 <Hero />
                 <TopUniversities/>
+                <Testimonial/>
+                <Usp/>
               </>
             } />
             

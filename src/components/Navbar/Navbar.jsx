@@ -13,7 +13,7 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <nav className='bg-[#FFFFFF] text-black sticky top-0 shadow-md shadow-[#ff9422d3]'
+    <nav className='bg-[#FFFFFF] text-black sticky top-0 shadow-md shadow-[#ff9422d3] z-50'
       style={{
         fontFamily: "Gilroy-Bold"
       }}
