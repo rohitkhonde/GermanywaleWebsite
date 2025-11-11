@@ -18,7 +18,7 @@ const Testicard = ({ item }) => {
           }}
         >
           {/* ✅ Responsive text sizes */}
-          <span className="text-xl sm:text-sm lg:text-xl leading-relaxed">
+          <span className="text-xl sm:text-base lg:text-xl leading-relaxed">
             {item.description}
           </span>
         </div>

@@ -1,6 +1,16 @@
 import React, { useRef, useState } from 'react'
 import { TbPlayerTrackNextFilled } from 'react-icons/tb'
 import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 
 
@@ -45,49 +55,43 @@ import Testicard from './Testicard';
 
 
 const Testimonial = () => {
-   const [sliderRef, setSliderRef] = useState(null);
+const sliderRef = useRef(null);
+    const navigationNextRef = useRef(null);
 
     // Responsiveness of the cards
-  const settings = {
+const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 3000, // ✅ Add this - 3 seconds between slides
+    autoplaySpeed: 3000,
     cssEase: "ease",
-    pauseOnHover: true, // ✅ Optional: pause on hover
-    pauseOnFocus: true, // ✅ Optional: pause on focus
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    arrows: false,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1280, // Large screens
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 1024, // Tablets landscape
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-                autoplay: true, // ✅ Ensure autoplay works in responsive
-                autoplaySpeed: 3000,
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 640, // Mobile devices (this is the key!)
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                initialSlide: 1,
-                autoplay: true, // ✅ Ensure autoplay works in responsive
-                autoplaySpeed: 3000,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                autoplay: true, // ✅ Ensure autoplay works in responsive
-                autoplaySpeed: 3000,
+                dots: true,
             }
         }
     ]
@@ -238,52 +242,77 @@ const Testimonial = () => {
       course: "Master's in Applied Data Science and Analytics",
     },
 ];
+
   return (
-    <div className='container'>
-        <div className='flex flex-col'>
-          <div className='flex items-center justify-center'>
-            <div className='flex-1'></div>
-              <div className='text-center flex-1'>
-                <h3 className="text-2xl sm:text-2xl md:text-4xl mt-4 mb-6 bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent"
-                style={{
-                    fontFamily:"Gilroy-Bold"
-                }}>
-                  What our Student Speak
-                </h3>
-            </div>
-            <div className='flex flex-1 justify-end items-start'>
-                <button className=''
-                        onClick={() => sliderRef?.slickNext()}>
-                    <TbPlayerTrackNextFilled
-                    color='#DB4A11' 
-                    style={{
-                        fontSize:"1.5rem"
-                    }}
-                    />
-                </button>
-            </div>
+        <div className='container'>
+            <div className='flex flex-col'>
+                <div className='flex items-center justify-center'>
+                    <div className='flex-1'></div>
+                    <div className='text-center flex-1'>
+                        <h3 className="text-2xl sm:text-lg md:text-4xl mt-4 mb-6 bg-gradient-to-r from-[#ff9422] to-[#d63715] bg-clip-text text-transparent"
+                            style={{ fontFamily: "Gilroy-Bold" }}>
+                            What our Student Speak
+                        </h3>
+                    </div>
+                    <div className='flex flex-1 justify-end items-start'>
+                        <button ref={navigationNextRef}>
+                            <TbPlayerTrackNextFilled
+                                color='#DB4A11' 
+                                style={{ fontSize: "1.5rem" }}
+                            />
+                        </button>
+                    </div>
+                </div>
 
-          </div>
-
-            {/* Cards */}
-            <div className='w-full'>
-               <Slider ref={setSliderRef} {...settings}>
+                {/* Swiper Carousel */}
+                <div className='w-full px-8'>
+                    <Swiper
+                        modules={[Navigation, Autoplay]}
+                        spaceBetween={16}
+                        slidesPerView={1}
+                        navigation={{
+                            nextEl: navigationNextRef.current,
+                        }}
+                       
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 16,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 24,
+                            },
+                        }}
+                        onSwiper={(swiper) => {
+                            // Delay navigation init for refs to be defined
+                            setTimeout(() => {
+                                swiper.params.navigation.nextEl = navigationNextRef.current;
+                                swiper.navigation.init();
+                                swiper.navigation.update();
+                            });
+                        }}
+                    >
                         {hotelCards.map((card, index) => (
-                          
+                            <SwiperSlide key={index}>
+                             
                                 <Testicard item={card} />
-                            
+                               
+                            </SwiperSlide>
                         ))}
-                    </Slider>
-             
-                
+                    </Swiper>
+                </div>
             </div>
-
-
-
         </div>
-      
-    </div>
-  )
+    );
 }
 
 export default Testimonial
