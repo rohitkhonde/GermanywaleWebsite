@@ -31,7 +31,7 @@ const SyncDocument = () => {
   ]
 
   return (
-    <section className="px-4 sm:px-8 lg:px-8 xl:px-28 py-8 sm:py-12">
+    <section className="px-8 sm:px-8 lg:px-8 xl:px-28 py-8 sm:py-12">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-7xl mx-auto">
         
         {/* ✅ Text Content - Left Side */}
@@ -83,7 +83,7 @@ const FeatureItem = React.memo(({ text }) => (
     <div className="flex-shrink-0 mt-1">
       <MdDonutSmall className="text-[#ff9422] text-lg group-hover:scale-110 transition-transform" />
     </div>
-    <p className="text-black text-sm sm:text-base leading-relaxed group-hover:text-gray-900 transition-colors"
+    <p className="text-black text-sm text-left sm:text-base leading-relaxed group-hover:text-gray-900 transition-colors"
        style={{ fontFamily: "Gilroy-Medium" }}>
       {text}
     </p>

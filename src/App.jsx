@@ -12,6 +12,8 @@ const Testimonial = lazy(()=> import("./components/Testimonial/Testimonial"))
 const Usp = lazy(()=> import('./components/Usp/Usp'))
 const StudyInGermany = lazy(()=>import('./components/StudyInGermany/StudyInGermany'))
 const SyncDocument = lazy(()=> import("./components/SyncDocument/SyncDocument"))
+const Partners = lazy(() => import('./components/Partners/Partners'))
+const Mentors = lazy(()=> import ('./components/Mentors/Mentors'))
 // ✅ Create a proper loading component
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center min-h-screen">
@@ -39,6 +41,8 @@ function App() {
                 <StudyInGermany/>
                 <Transparency/>
                 <SyncDocument/>
+                <Partners/>
+                <Mentors/>
                 
               </>
             } />

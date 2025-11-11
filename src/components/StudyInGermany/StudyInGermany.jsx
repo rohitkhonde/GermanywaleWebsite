@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const StudyInGermany = () => {
-  return (
-    <div>StudyInGermany</div>
     
+  return (
+
+    <div>StudyInGermany</div>
+
+
   )
 }
 
