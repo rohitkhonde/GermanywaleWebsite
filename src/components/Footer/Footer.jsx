@@ -12,7 +12,7 @@ const Footer = () => {
         <div className='container px-4 sm:px-6 lg:px-8 flex flex-col text-white'>
 
             {/* Upper Footer Items - Responsive grid */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-8'>
+            <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-8'>
                 
                 {/* Programs */}
                 <div className='text-center sm:text-left'>

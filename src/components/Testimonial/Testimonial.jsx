@@ -212,13 +212,13 @@ const sliderRef = useRef(null);
             <div className='flex flex-col'>
                 <div className='flex items-center justify-center'>
                     <div className='flex-1'></div>
-                    <div className='text-center flex-1'>
+                    <div className='text-center '>
                         <h3 className="text-2xl sm:text-lg md:text-4xl mt-4 mb-6 bg-gradient-to-r from-[#ff9422] to-[#d63715] bg-clip-text text-transparent"
                             style={{ fontFamily: "Gilroy-Bold" }}>
                             What our Student Speak
                         </h3>
                     </div>
-                    <div className='flex flex-1 justify-end items-start'>
+                    <div className='flex flex-1 justify-center items-start'>
                         <button ref={navigationNextRef}>
                             <TbPlayerTrackNextFilled
                                 color='#DB4A11' 

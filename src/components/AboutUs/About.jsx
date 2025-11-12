@@ -25,7 +25,7 @@ const About = () => {
             <div className='flex flex-col'>
                 {/* Our Obession */}
                 <div className='mt-6 py-2'>
-                    <h1 className='text-4xl sm:text-2xl lg:text-4xl bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent'
+                    <h1 className='text-3xl sm:text-2xl lg:text-4xl bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent'
                     style={{
                         fontFamily:"Gilroy-Bold"
                     }}>OUR OBSESSION?</h1>
@@ -34,18 +34,18 @@ const About = () => {
                 {/* TO MAKE YOUR JOURNEY HASSLE FREE */}
 
                 <div className='text-center mb-8 sm:mb-12'>
-                    <h1 className='text-4xl sm:text-2xl lg:text-4xl bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent'
+                    <h1 className='text-3xl sm:text-2xl lg:text-4xl bg-gradient-to-r from-[#ff9422]  to-[#d63715] bg-clip-text text-transparent'
                     style={{fontFamily:"Gilroy-Bold"}}>TO MAKE YOUR JOURNEY HASSLE FREE</h1>
                 </div>
 
                 {/* Our Mission */}
                 <div className='flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-24 mb-8 sm:mb-12 lg:mb-16 px-8'>
-                    <h2 className='text-black text-4xl sm:text-2xl lg:text-4xl'
+                    <h2 className='text-black text-3xl sm:text-2xl lg:text-4xl'
                     style={{
                         fontFamily:"Gilroy",
                         fontWeight:"700"
                     }}>Our Mission</h2>
-                    <p className='text-left text-xl text-[#333] sm:text-lg md:text-xl lg:text-xl '
+                    <p className='text-left text-md text-[#333] sm:text-lg md:text-xl lg:text-xl '
                     style={{
                         fontFamily:"Gilroy-Medium"
                     }}>At Germanywale, we empower aspiring minds with personalized support and expert guidance. We make studying in Germany seamless, fostering a community of ambitious individuals. Our mission is to turn academic dreams into reality. Together, we pave the way for a brighter future.</p>
@@ -62,12 +62,12 @@ const About = () => {
             // background:rgba(0, 0, 0, 0.7)
 
             }}>
-                <div className='h-full flex flex-col lg:flex-row items-center justify-around px-8 gap-6 sm:gap-8 lg:gap-24 sm:px-8'
+                <div className='h-full flex flex-col lg:flex-row items-center justify-around px-8 gap-0 sm:gap-8 lg:gap-24'
                 style={{
                     backgroundColor:"rgba(0, 0, 0, 0.7)",
                 }}>
                     <div className='text-center'>
-                    <h1 className='text-white text-4xl sm:text-2xl lg:text-4xl'
+                    <h1 className='text-white text-3xl sm:text-2xl lg:text-4xl'
                     style={{
                         fontFamily:"Gilroy",
                         fontWeight:"700"
@@ -75,7 +75,7 @@ const About = () => {
                     </div>
                 
                 <div className='px-4 sm:px-1 lg:px-4'>
-                    <p className='text-white text-left text-xl text-[#333] sm:text-lg md:text-xl lg:text-xl'
+                    <p className='text-white text-left text-md text-[#333] sm:text-md md:text-xl lg:text-xl'
                     style={{
                         fontFamily:"Gilroy-Medium"
                     }}>Our vision at Germanywale is to bridge the gap between ambition and achievement, empowering students to pursue their dreams in Germany with ease. We're dedicated to delivering a seamless, supportive, and successful experience, from application to arrival. Your journey, simplified. Your future, empowered.</p>

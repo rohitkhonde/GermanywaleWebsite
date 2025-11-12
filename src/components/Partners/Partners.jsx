@@ -11,12 +11,12 @@ import p6 from "../../assets/partner/p6.png";
 
 const Partners = () => {
     const partners = [
-        {logo:p1 , className:"w-32"},
-        {logo:p2, className:"w-32"},
-        {logo:p3, className:"w-34"},
-        {logo:p4, className:"w-32"},
-        {logo:p6, className:"w-48"},
-        {logo:p5 , className:"w-48"},
+        {logo:p1 , className:"w-20 md:w-24"},
+        {logo:p2, className:"w-24 md:w-32"},
+        {logo:p3, className:"w-26 md:w-32"},
+        {logo:p4, className:"w-28 md:w-32"},
+        {logo:p6, className:"w-28 md:w-48"},
+        {logo:p5 , className:"w-48 md:w-48"},
 
     ]
   return (
@@ -28,8 +28,8 @@ const Partners = () => {
                 style={{fontFamily:"Gilroy-Bold"}}>Our Partners</h1>
             </div>
             <div className='text-wrap text-lg sm:text-lg'>
-                <p className='text-[#E0E0E0] text-wrap '
-                style={{fontFamily:"Gilroy-Bold"}}>We have collaborated with a diverse array of partners <br/> each bringing unique expertise and value to make journey of our student hassle-free.</p>
+                <p className='text-[#E0E0E0] text-wrap px-4 '
+                style={{fontFamily:"Gilroy-Bold"}}>We have collaborated with a diverse array of partners each bringing unique expertise and value to make journey of our student hassle-free.</p>
             </div>
             <div className='flex space-x-14 py-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
                 {partners.map((partner)=>(
