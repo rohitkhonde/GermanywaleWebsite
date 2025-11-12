@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@egjs/flicking": "^4.14.1",
+    "@egjs/react-flicking": "^4.14.3",
     "@tailwindcss/vite": "^4.1.17",
     "@vercel/speed-insights": "^1.2.0",
     "aos": "^2.3.4",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.24",
+    "keen-slider": "^6.8.6",
     "react": "^19.1.1",
     "react-card-slider-component": "^1.0.9",
     "react-dom": "^19.1.1",

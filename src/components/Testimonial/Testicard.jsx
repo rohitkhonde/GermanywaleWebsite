@@ -18,7 +18,7 @@ const Testicard = ({ item }) => {
           }}
         >
           {/* ✅ Responsive text sizes */}
-          <span className="text-xl sm:text-base lg:text-xl leading-relaxed">
+          <span className="text-md sm:text-sm lg:text-xl leading-relaxed">
             {item.description}
           </span>
         </div>
@@ -50,7 +50,7 @@ const Testicard = ({ item }) => {
         </div>
         
         {/* ✅ Responsive student image */}
-        <div className="flex-shrink-0 ml-3 sm:ml-4">
+        <div className="flex-shrink-0">
           <img 
             src={item.imageSrc} 
             alt="student"

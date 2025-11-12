@@ -58,44 +58,7 @@ const Testimonial = () => {
 const sliderRef = useRef(null);
     const navigationNextRef = useRef(null);
 
-    // Responsiveness of the cards
-const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "ease",
-    pauseOnHover: true,
-    pauseOnFocus: true,
-    arrows: false,
-    responsive: [
-        {
-            breakpoint: 1280, // Large screens
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 1024, // Tablets landscape
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 640, // Mobile devices (this is the key!)
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-            }
-        }
-    ]
-};
+
  const hotelCards = [
     {
       imageSrc: purvanshi,
@@ -104,6 +67,7 @@ const settings = {
       videoLink: "https://www.instagram.com/p/CXsiGOVvMjI/?igsh=MTEyZ2E5b3Z5b2xqdA==",
       course: "MSc in Data Science",
       university: purvanshiuniversity,
+      // class:"absolute bottom-0  right-0 w-32 h-20 sm:w-48 sm:h-32 lg:w-40 lg:h-32 xl:w-48 xl:h-36 object-cover rounded-lg"
     },
     {
       imageSrc: shagun,
@@ -275,7 +239,7 @@ const settings = {
                         }}
                        
                         autoplay={{
-                            delay: 3000,
+                            delay: 300000,
                             disableOnInteraction: false,
                         }}
                         breakpoints={{

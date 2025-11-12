@@ -11,7 +11,7 @@ import p6 from "../../assets/partner/p6.png";
 
 const Partners = () => {
     const partners = [
-        {logo:p1 , className:"w-20"},
+        {logo:p1 , className:"w-32"},
         {logo:p2, className:"w-32"},
         {logo:p3, className:"w-34"},
         {logo:p4, className:"w-32"},

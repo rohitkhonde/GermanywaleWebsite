@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Transparency from './components/Transparency/Transparency'
 
+
 // ✅ Lazy load components
 const Header = lazy(() => import('./components/Header/Header'))
 const Navbar = lazy(() => import('./components/Navbar/Navbar'))
@@ -14,6 +15,11 @@ const StudyInGermany = lazy(()=>import('./components/StudyInGermany/StudyInGerma
 const SyncDocument = lazy(()=> import("./components/SyncDocument/SyncDocument"))
 const Partners = lazy(() => import('./components/Partners/Partners'))
 const Mentors = lazy(()=> import ('./components/Mentors/Mentors'))
+const StayInTouch = lazy(() => import('./components/StayInTouch/StayInTouch'))
+const Reviews = lazy(()=>import('./components/Reviews/Reviews'))
+const News = lazy(()=>import ('./components/News/News') )
+const Footer = lazy(()=>import('./components/Footer/Footer'))
+const AboutUs = lazy(()=>import('./components/AboutUs/About'))
 // ✅ Create a proper loading component
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center min-h-screen">
@@ -29,11 +35,11 @@ function App() {
         <Suspense fallback={<LoadingSpinner />}>
           {/* ✅ Header is outside Routes so it's always visible */}
           <Header />
+          <Navbar />
           
           <Routes>
             <Route path="/" element={
               <>
-                <Navbar />
                 <Hero />
                 <TopUniversities/>
                 <Testimonial/>
@@ -43,14 +49,19 @@ function App() {
                 <SyncDocument/>
                 <Partners/>
                 <Mentors/>
-                
+                <StayInTouch/>
+                <Reviews/>
+                <News/>
               </>
             } />
+            <Route path='/about' element={<AboutUs/>}/>
+
             
            
             
            
           </Routes>
+            <Footer/>
         </Suspense>
       </Router>
     </div>
